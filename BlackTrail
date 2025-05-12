@@ -29,9 +29,23 @@ local tra = Instance.new("Trail", plr)
 ios.InputBegan:Connect(function(input, notinput)
 if not notinput then
 	if input.KeyCode == Enum.KeyCode.T then
-		if st == "stop" then 
+		if st == "stop" then
+		local g = game.StarterGui
+		g:SetCore("SendNotification", {
+			Title = "Start or stop",
+			Text = "Start",
+			Icon = "",
+			Duration = 2
+		})
 			st = "start"
 		else
+		local g = game.StarterGui
+		g:SetCore("SendNotification", {
+			Title = "Start or stop",
+			Text = "Stop",
+			Icon = "",
+			Duration = 2
+		})
 			plr.Humanoid.WalkSpeed = 16
 			st = "stop"
 		end
@@ -70,8 +84,22 @@ ios.InputBegan:Connect(function(input, notinput)
 if not notinput then
 	if input.KeyCode == Enum.KeyCode.H then
 		if int == "stop" then
+		local g = game.StarterGui
+		g:SetCore("SendNotification", {
+			Title = "Start or stop",
+			Text = "Start",
+			Icon = "",
+			Duration = 2
+		})
 			int = "start"
 		else
+		local g = game.StarterGui
+		g:SetCore("SendNotification", {
+			Title = "Start or stop",
+			Text = "Stop",
+			Icon = "",
+			Duration = 2
+		})
 			int = "stop"
 		end
 	end
